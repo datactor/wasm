@@ -45,6 +45,7 @@ $ cargo new --lib [project name]
 ## Cargo.toml 편집
 1) [lib] 섹션 추가
    [lib] 섹션에 crate-type 필드를 추가함
+
    crate-type = ["cdylib"] // 이는 라이브러리가 C 호환 동적 라이브러리임을 지정함.
    wasm crate는 normal crate와는 약간의 차이가 있다.
    일반적인 crate는 rlib(기본값) 또는 바이너리일 경우 bin이 기본값이다.
@@ -52,12 +53,13 @@ $ cargo new --lib [project name]
    wasm의 경우 "create a *.wasm file without a start function"을 의미함.
    다른 플랫폼에서 이 출력 유형은 linux의 *.so, macOS의 *.dylib 및 windows의 *.dll 파일 생성
 
-dynamic link lib?
-동적 링크라고 하며 실행 파일에서 해당 라이브러리의 기능을 사용 시에만 라이브러리 파일을 참조하여(혹은 다운로드받아) 기능을 호출한다.
-정적 링크와는 다르게 컴파일 시점에 실행 파일에 함수를 복사하지 않고, 함수의 위치정보만 갖고 그 함수를 호출할 수 있게 한다.
 
-또한 우리 라이브러리가 wasm-pack test로 unit test될 수 있도록 하기 위해 crate-type = ["rlib"]을 지정함.
-이게 없으면 cdylib crate 유형이 wasm-pack의 unit test stype과 호환되지 않기 때문에 라이브러리를 테스트할 수 없음.
+    dynamic link lib?
+    동적 링크라고 하며 실행 파일에서 해당 라이브러리의 기능을 사용 시에만 라이브러리 파일을 참조하여(혹은 다운로드받아) 기능을 호출한다.
+    정적 링크와는 다르게 컴파일 시점에 실행 파일에 함수를 복사하지 않고, 함수의 위치정보만 갖고 그 함수를 호출할 수 있게 한다.
+    
+    또한 우리 라이브러리가 wasm-pack test로 unit test될 수 있도록 하기 위해 crate-type = ["rlib"]을 지정함.
+    이게 없으면 cdylib crate 유형이 wasm-pack의 unit test stype과 호환되지 않기 때문에 라이브러리를 테스트할 수 없음.
 
 2) wasm-bindgen 종속성 추가(JS와 wasm 모듈 간의 상호 운용성을 용이하게 함)
    이 패키지를 사용하면, #[wasm-bindgen] attribute를 이용해 JS와 Rust에 생성된 wasm 사이에
