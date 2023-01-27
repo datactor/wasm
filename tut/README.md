@@ -32,8 +32,10 @@ templates and usages of `wasm-pack`.
 
 
 ## wasm 프로젝트 생성하기
-$ cargo generate --git https://github.com/rustwasm/wasm-pack-template(권장되는 방법)
-프로젝트 이름을 입력하면 생성됨
+$ cargo generate --git https://github.com/rustwasm/wasm-pack-template
+(권장되는 방법)
+
+명령어 입력 후 프로젝트 이름을 입력하면 생성됨
 
 또는
 
@@ -190,7 +192,9 @@ cargo test가 프로젝트에서 작동할 수 있음!!
 
 ## Building your project
 $ wasm-pack build
+
 만약 Node.js를 필요로 하는 패키지(CommonJS 모듈, e.g. require)를 사용하는 경우 다음 방법으로 빌드한다.
+
 $ wasm-pack build --target nodejs
 
 실행 시 이 명령은 다음의 작업들을 수행함
