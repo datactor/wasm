@@ -1,0 +1,14 @@
+/home/jam/workspace/rust/wasm/wasm_todo_app/target/debug/deps/indexmap-0da6790d8e4b667b.rmeta: /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/lib.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/arbitrary.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/macros.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/equivalent.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/mutable_keys.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/util.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map/core.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map/core/raw.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/set.rs
+
+/home/jam/workspace/rust/wasm/wasm_todo_app/target/debug/deps/indexmap-0da6790d8e4b667b.d: /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/lib.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/arbitrary.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/macros.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/equivalent.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/mutable_keys.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/util.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map/core.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map/core/raw.rs /home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/set.rs
+
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/lib.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/arbitrary.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/macros.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/equivalent.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/mutable_keys.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/util.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map/core.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/map/core/raw.rs:
+/home/jam/.cargo/registry/src/github.com-1ecc6299db9ec823/indexmap-1.9.2/src/set.rs:

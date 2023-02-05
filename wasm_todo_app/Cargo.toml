@@ -1,0 +1,21 @@
+[package]
+name = "wasm_todo_app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gloo = "0.8.0"
+serde = "1.0.152"
+serde_derive = "1.0.152"
+strum = "0.24.1"
+strum_macros = "0.24.3"
+yew = { version = "0.20.0", features = ["csr"] }
+#yew = { path = "packages/yew", features = ["csr"] }
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "HtmlInputElement",
+]
