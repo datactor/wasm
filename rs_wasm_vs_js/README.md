@@ -23,9 +23,6 @@ In any case, `Rust-wasm` is about 1.75x faster than `JS`
 Edge and Chrome are similar enough that there is no difference, but in Firefox, it is about 1.5 times faster compared to the same wasm.
 On the other hand, running JS in Firefox is about twice as slow compared to the previous both browsers.
 
-It is better to run `JS` in `Edge` or `Chrome` and run `wasm` in `Firefox`.
-
-
 ### how to run
 $ wasm-pack build --target web --no-typescript --mode normal
 #### running without npm
