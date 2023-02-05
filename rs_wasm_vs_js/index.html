@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Fibonacci bench</title>
+</head>
+<body>
+    <h1>Fibo wasm</h1>
+    <script type="module">
+        main()
+        async function main() {
+            const wasm = await import('/pkg/rs_wasm_vs_js.js')
+            await wasm.default('/pkg/rs_wasm_vs_js_bg.wasm')
+            console.time("rust")
+            console.log(wasm.fib(40))
+            console.timeEnd("rust")
+        }
+
+        function fib(n) {
+            if (n == 0 || n == 1)
+                return n;
+            return fib(n-1) + fib(n-2);
+        }
+
+        function fibTime() {
+            console.time("js")
+            fib(40)
+            console.timeEnd("js")
+        }
+
+        fibTime()
+
+    </script>
+</body>
+</html>
