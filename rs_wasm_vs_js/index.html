@@ -5,30 +5,57 @@
     <title>Fibonacci bench</title>
 </head>
 <body>
-    <h1>Fibo wasm</h1>
+    <h1>JS & Rust-wasm Fibo bench</h1>
+    <input type="text" id="input-field" placeholder="Enter a number" value="40">
+    <button id="js-button">Cal(JS)</button>
+    <button id="rust-button">Cal(Rust-Wasm)</button>
+    <div id="js-result"></div>
+    <div id="rust-result"></div>
     <script type="module">
         main()
         async function main() {
             const wasm = await import('/pkg/rs_wasm_vs_js.js')
             await wasm.default('/pkg/rs_wasm_vs_js_bg.wasm')
-            console.time("rust")
-            console.log(wasm.fib(40))
-            console.timeEnd("rust")
+            // console.time("rust")
+            // console.log(wasm.fib(40))
+            // console.timeEnd("rust")
         }
 
         function fib(n) {
             if (n == 0 || n == 1)
-                return n;
+                return 1
             return fib(n-1) + fib(n-2);
         }
 
-        function fibTime() {
-            console.time("js")
-            fib(40)
-            console.timeEnd("js")
-        }
+        // function fibTime() {
+        //     console.time("js")
+        //     fib(40)
+        //     console.timeEnd("js")
+        // }
+        // fibTime()
 
-        fibTime()
+        document.getElementById("js-button").addEventListener("click", function() {
+            const input = document.getElementById("input-field").value
+            const n = parseInt(input)
+            const start = performance.now()
+            const result = fib(n)
+            const end = performance.now()
+            const time = (end - start).toFixed(3)
+            document.getElementById("js-result").innerHTML = `JavaScript time taken is: ${time} ms, result: ${result}`
+        })
+
+        document.getElementById("rust-button").addEventListener("click", async function() {
+            const input = document.getElementById("input-field").value
+            const n = parseInt(input)
+            const start = performance.now()
+            const wasm = await import('/pkg/rs_wasm_vs_js.js')
+            await wasm.default('/pkg/rs_wasm_vs_js_bg.wasm')
+            const result = wasm.fib(n)
+            // console.log(wasm.fib(n))
+            const end = performance.now()
+            const time = (end - start).toFixed(3)
+            document.getElementById("rust-result").innerHTML = `RustWasm time taken is: ${time} ms, result: ${result}`
+        })
 
     </script>
 </body>
