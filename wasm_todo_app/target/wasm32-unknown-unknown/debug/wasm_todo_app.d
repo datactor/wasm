@@ -1,1 +1,0 @@
-/home/jam/workspace/rust/wasm/wasm_todo_app/target/wasm32-unknown-unknown/debug/wasm_todo_app.wasm: /home/jam/workspace/rust/wasm/wasm_todo_app/src/main.rs /home/jam/workspace/rust/wasm/wasm_todo_app/src/state.rs

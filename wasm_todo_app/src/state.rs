@@ -115,7 +115,7 @@ pub struct Entry {
     pub editing: bool,
 }
 
-#[derive(Clone, Copy, Debug, EnumIter, Display, PartialEq, Serialize, Deserialize)]
+#[derive(Clone, Copy, Debug, EnumIter, Display, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Filter {
     All,
     Active,

@@ -5,6 +5,9 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+default = ["wee_alloc"] # wasm 파일 용량을 10kb정도 줄여줌
+
 [dependencies]
 gloo = "0.8.0"
 serde = "1.0.152"
@@ -12,10 +15,17 @@ serde_derive = "1.0.152"
 strum = "0.24.1"
 strum_macros = "0.24.3"
 yew = { version = "0.20.0", features = ["csr"] }
-#yew = { path = "packages/yew", features = ["csr"] }
+wee_alloc = { version = "0.4.5", optional = true }
 
 [dependencies.web-sys]
 version = "0.3"
 features = [
     "HtmlInputElement",
 ]
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s" # wasm 파일 용량을 30~50kb정도 줄여준다.
+
+# 단순히 wasm파일의 사이즈를 줄이는 것은 wee_alloc, opt-level 조정하는 것보다
+# release 모드로 컴파일하는 것이 가장 효과적이다(2116kb -> 255kb).

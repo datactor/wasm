@@ -5,8 +5,11 @@ use web_sys::HtmlInputElement as InputElement;
 use yew::events::{FocusEvent, KeyboardEvent};
 use yew::html::Scope;
 use yew::{classes, html, Classes, Component, Context, Html, NodeRef, TargetCast};
-use yew::prelude::*;
+
 mod state;
+
+#[global_allocator]
+static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 const KEY: &str = "yew.wasm_todo_app.self";
 
