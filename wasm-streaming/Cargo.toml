@@ -1,0 +1,37 @@
+[package]
+name = "wasm-streaming"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#yew = { version =  "0.20.0", features = ["csr"] }
+yew = "^0.19"
+wasm-bindgen = "0.2.80"
+wasm-bindgen-futures = "0.4.30"
+js-sys = "0.3"
+
+[dependencies.web-sys]
+version = "0.3.57"
+features = [
+    # Some APIs are unstable and requires. Add 'RUSTFLAGS=--cfg=web_sys_unstable_apis' to env val
+    "console",
+    "EncodedVideoChunk",
+    "HtmlVideoElement",
+    "MediaDevices",
+    "MediaStream",
+    "MediaStreamTrack",
+    "MediaStreamTrackProcessor",
+    "MediaStreamTrackProcessorInit",
+    "MediaStreamConstraints",
+    "Navigator",
+    "ReadableStream",
+    "ReadableStreamGetReaderOptions",
+    "ReadableStreamDefaultReader",
+    "VideoEncoder",
+    "VideoEncoderConfig",
+    "VideoEncoderInit",
+    "VideoFrame",
+    "VideoTrack",
+]

@@ -1,0 +1,1 @@
+{"rustc":18106052652158115159,"features":"[]","target":16520059052201936567,"profile":3735503092003429423,"path":15633932689569414493,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/scoped-tls-hkt-8a69b4427740b2fb/dep-lib-scoped-tls-hkt"}}],"rustflags":["--cfg=web_sys_unstble_apis"],"metadata":239196177548538683,"config":2202906307356721367,"compile_kind":0}

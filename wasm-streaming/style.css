@@ -1,0 +1,20 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(200px, 1fr));
+}
+
+.consumer {
+    padding: 10px;
+}
+
+.producer {
+    padding: 10px;
+}
+
+.consumer > h3 {
+    color: white;
+}
+
+#webcam {
+    width: 100%;
+}
